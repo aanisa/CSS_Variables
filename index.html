@@ -59,6 +59,13 @@
   </style>
 
   <script>
+    const input = document.querySelectorAll('.controls input');
+
+    function styleUpdates() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
   </script>
 
 </body>
